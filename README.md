@@ -158,6 +158,9 @@ The assessment implementation is complete and has been verified with:
 - A four-node Workflow using live GitHub Issue data.
 - A published Web App producing an English triage report.
 
+The step-by-step English recording plan is available in
+[`DEMO_SCRIPT.md`](DEMO_SCRIPT.md).
+
 ## License
 
 MIT
