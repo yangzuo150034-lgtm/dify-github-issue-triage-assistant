@@ -1,0 +1,20 @@
+[project]
+name = "github-issue-triage"
+version = "0.1.0"
+description = "A Dify tool plugin that fetches GitHub issues for AI-assisted triage."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "dify-plugin>=0.9.0,<0.10.0",
+    "requests>=2.32.0,<3.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.3.0,<9.0.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q -p no:cacheprovider"
+

@@ -1,0 +1,15 @@
+.env
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+pytest-cache-files-*/
+.coverage
+htmlcov/
+dist/
+*.difypkg
+plugin-debug.*.log
+tmp/
+.vscode/
+.DS_Store
+Dify DevRel Intern _ Technical Assessment.pdf

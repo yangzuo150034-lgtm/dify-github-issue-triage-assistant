@@ -1,0 +1,73 @@
+identity:
+  name: fetch_github_issues
+  author: "86180"
+  label:
+    en_US: Fetch GitHub Issues
+description:
+  human:
+    en_US: Fetch recent issues from a public GitHub repository and exclude pull requests.
+  llm: Fetch structured GitHub issue data for categorization, priority analysis, and recommendations. Pull requests are excluded.
+parameters:
+  - name: owner
+    type: string
+    required: true
+    label:
+      en_US: Repository owner
+    human_description:
+      en_US: GitHub organization or username, for example langgenius.
+    llm_description: The GitHub organization or username that owns the repository.
+    form: llm
+  - name: repository
+    type: string
+    required: true
+    label:
+      en_US: Repository name
+    human_description:
+      en_US: Repository name without the owner, for example dify.
+    llm_description: The GitHub repository name without its owner.
+    form: llm
+  - name: state
+    type: select
+    required: true
+    default: open
+    options:
+      - value: open
+        label:
+          en_US: Open
+      - value: closed
+        label:
+          en_US: Closed
+      - value: all
+        label:
+          en_US: All
+    label:
+      en_US: Issue state
+    human_description:
+      en_US: Select open, closed, or all issues.
+    llm_description: The issue state filter; one of open, closed, or all.
+    form: form
+  - name: max_issues
+    type: number
+    required: true
+    default: 10
+    min: 1
+    max: 30
+    label:
+      en_US: Maximum issues
+    human_description:
+      en_US: Number of real issues to return, from 1 to 30.
+    llm_description: Maximum number of issues to fetch, between 1 and 30.
+    form: form
+  - name: labels
+    type: string
+    required: false
+    label:
+      en_US: Labels
+    human_description:
+      en_US: Optional comma-separated GitHub labels, for example bug,help wanted.
+    llm_description: Optional comma-separated labels used to filter GitHub issues.
+    form: llm
+extra:
+  python:
+    source: tools/fetch_github_issues.py
+

@@ -1,0 +1,25 @@
+identity:
+  author: "86180"
+  name: github_issue_triage
+  label:
+    en_US: GitHub Issue Triage
+  description:
+    en_US: Securely connect to GitHub and fetch issues for a Dify triage workflow.
+  icon: icon.svg
+credentials_for_provider:
+  github_token:
+    type: secret-input
+    required: true
+    label:
+      en_US: GitHub personal access token
+    placeholder:
+      en_US: github_pat_...
+    help:
+      en_US: Use a fine-grained token with read-only access to public repositories.
+    url: https://github.com/settings/personal-access-tokens/new
+tools:
+  - tools/fetch_github_issues.yaml
+extra:
+  python:
+    source: provider/github_issue_triage.py
+

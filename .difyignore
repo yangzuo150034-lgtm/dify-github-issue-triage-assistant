@@ -1,0 +1,17 @@
+.env
+.env.example
+.venv/
+.git/
+.gitignore
+.github/
+.vscode/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+pytest-cache-files-*/
+tests/
+tmp/
+dist/
+*.difypkg
+plugin-debug.*.log
+Dify DevRel Intern _ Technical Assessment.pdf
