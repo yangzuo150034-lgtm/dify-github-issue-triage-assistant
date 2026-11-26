@@ -1,17 +1,16 @@
 # GitHub Issue AI Triage Assistant
 
-GitHub Issue AI Triage Assistant is a Dify Tool Plugin and Workflow that fetches real issues from a public GitHub repository, removes pull requests from the GitHub Issues API response, and gives an LLM structured evidence for triage.
+Turn a batch of public GitHub Issues into a maintainer's first-pass report. The [Dify](https://dify.ai/) workflow suggests a category, priority, and next action while keeping source links available for review. It does not label, close, or comment on issues.
 
-The final Workflow produces an English report with issue category, priority, reasoning, and a recommended next action.
+**[Read the sample report](docs/sample-triage-report.md)** · [Install your own copy](#requirements)
 
-## Live Demo
+## Preview without an account
 
-Try the published Dify Web App:
+The [sample report](docs/sample-triage-report.md) shows the input, a three-issue triage table, and evidence notes using fictional issues. It needs no Dify account or GitHub token.
 
-https://udify.app/workflow/rRFMf12ZMNKOPkWP
+The [hosted demo](https://udify.app/workflow/rRFMf12ZMNKOPkWP) currently has a GitHub credential issue and may not generate a report. Use the sample to preview the output or [import the workflow](github-issue-ai-triage-assistant.yml) into your own workspace.
 
-The app is prefilled with `langgenius/dify` for a quick test. It can analyze any
-public GitHub repository that exposes Issues.
+**中文速览：** 这是一个只读的 GitHub Issue 分拣工具。先看[示例报告](docs/sample-triage-report.md)，不需要注册或填写 token。报告里的分类、优先级和下一步是建议，由维护者核对后决定。
 
 ## Features
 
