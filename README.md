@@ -2,28 +2,15 @@
 
 Turn a batch of public GitHub Issues into a maintainer's first-pass report. The [Dify](https://dify.ai/) workflow suggests a category, priority, and next action while keeping source links available for review. It does not label, close, or comment on issues.
 
-**[Open the hosted Dify demo](https://udify.app/workflow/rRFMf12ZMNKOPkWP)** · [Read an example](#example-report) · [Install your own copy](#requirements)
+**[Read the sample report](docs/sample-triage-report.md)** · [Install your own copy](#requirements)
 
-## Try it
+## Preview without an account
 
-1. Open the demo and use the prefilled public repository, `langgenius/dify`.
-2. Select `open`, enter `3` as the maximum, and leave the label filter empty.
-3. Run the workflow. Open an original GitHub issue from the report to check the evidence before acting on a suggestion.
+The [sample report](docs/sample-triage-report.md) shows the input, a three-issue triage table, and evidence notes using fictional issues. It needs no Dify account or GitHub token.
 
-If the hosted demo is unavailable, you can still inspect the example below and the [exported workflow](github-issue-ai-triage-assistant.yml).
+The [hosted demo](https://udify.app/workflow/rRFMf12ZMNKOPkWP) currently has a GitHub credential issue and may not generate a report. Use the sample to preview the output or [import the workflow](github-issue-ai-triage-assistant.yml) into your own workspace.
 
-**中文速览：** 这是一个只读的 GitHub Issue 分拣工具。它用 Dify 把公开仓库的 Issue 整理成一份英文报告，给出分类、优先级和下一步建议。体验时先用默认仓库试跑 3 条；最终判断由维护者完成。
-
-## Example report
-
-Illustrative output only, using fictional issues. The live workflow's wording and categories may vary.
-
-| Issue summary | Suggested category | Suggested priority | Why | Next action |
-| --- | --- | --- | --- | --- |
-| Import fails after upgrading | Bug | High | Report includes a reproducible failure and affected version | Confirm on the current release with a minimal sample |
-| Install guide omits a prerequisite | Documentation | Normal | Reporter identifies the missing setup step | Verify the requirement, then update the quick start |
-
-The report is a review aid. Use the source issue to confirm any proposed category, priority, or action.
+**中文速览：** 这是一个只读的 GitHub Issue 分拣工具。先看[示例报告](docs/sample-triage-report.md)，不需要注册或填写 token。报告里的分类、优先级和下一步是建议，由维护者核对后决定。
 
 ## Features
 
